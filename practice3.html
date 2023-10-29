@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Practice 3</title>
+    </head>
+    <body>
+        Password: <input type="text" id="pass1" value="">   <br>
+        Verify Password: <input type="text" id="pass2" value="">    <br>
+        <button onclick="verifyPassword()">Verify password</button>
+
+        <script>
+            var pass1 = document.getElementById("pass1");
+            var pass2 = document.getElementById("pass2");
+
+            function verifyPassword() {
+                if (pass1.value.length < 8 || pass2.value.length < 8) {
+                    if (pass1.value.length < 8) {
+                        alert("First password must be at least eight characters long");
+                    }
+                    
+                    if (pass2.value.length < 8) {
+                        alert("Second password must be at least eight characters long");
+                    }
+                } else if (pass1.value != pass2.value) {
+                    alert("First and second passwords don't match");
+                } else {
+                    alert("Fist and second passwords match");
+                }
+            }
+        </script>
+    </body>
+</html>
